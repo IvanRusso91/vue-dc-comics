@@ -72,7 +72,7 @@ export default {
 
     li{
       margin-right: 10px;
-      margin-top:50px
+      margin-top:60px
 
     }
 
@@ -81,18 +81,18 @@ export default {
       color: $primary-color;
       
       img{
-        width: 65px;
+        width: 50px;
       }
       .image-b,
       .image-c{
-        width: 80px;
+        width: 65px;
       }
       .image-d{
-        width: 55px;
+        width: 40px;
       }
       .image-e{
-        margin-top: 20px;
-        width: 80px;
+        margin-top: 15px;
+        width: 65px;
       }
       p{
         float: right;
