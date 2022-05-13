@@ -37,18 +37,14 @@
 </template>
 
 <script>
-
 export default {
   name: 'MainComp',
-
 }
 </script>
 
 <style  lang="scss" scoped>
-
 @import '../assets/style/vars';
 @import '../assets/style/mixin';
-
 .box-cards{
   background-color:$secondary-color ;
   height: 200px;
@@ -61,21 +57,14 @@ export default {
     padding: 0px 15px;
   }
 }
-
 .box-choice{
   background-color: $third-color;
   height: 200px;
-
+  display: flex;
+  align-items: center;
   ul{
     @include menu;
     list-style: none;
-
-    li{
-      margin-right: 10px;
-      margin-top:60px
-
-    }
-
     a{
       @include decor; 
       color: $primary-color;
@@ -100,8 +89,6 @@ export default {
         margin-top: 35px; 
       }
     }
-
   }
 }
-
 </style>

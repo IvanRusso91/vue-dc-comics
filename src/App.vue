@@ -5,6 +5,7 @@
 
     <MainComp />
     
+    <FooterComp />
   </div>
 </template>
 
@@ -12,12 +13,14 @@
 
 import HeaderComp from "./components/HeaderComp";
 import MainComp from './components/MainComp';
+import FooterComp from './components/FooterComp';
  
 export default {
   name: 'App',
   components: {
     HeaderComp,
     MainComp,
+    FooterComp,
    
   }
 }
