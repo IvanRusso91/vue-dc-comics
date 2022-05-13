@@ -14,3 +14,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@mixin decor{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}

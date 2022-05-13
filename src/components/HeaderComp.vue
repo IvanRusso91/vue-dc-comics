@@ -111,10 +111,8 @@ export default {
         }
 
         a{
-          color:$fourth-color; ;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-weight: bold;
+          color:$fourth-color; 
+          @include decor; 
           font-size: 0.9rem;
           &.active,
           &:hover{

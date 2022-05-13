@@ -1,19 +1,23 @@
 <template>
   <div id="app">
 
-   <HeaderComp />
+    <HeaderComp />
 
+    <MainComp />
+    
   </div>
 </template>
 
 <script>
 
 import HeaderComp from "./components/HeaderComp";
+import MainComp from './components/MainComp';
  
 export default {
   name: 'App',
   components: {
     HeaderComp,
+    MainComp,
    
   }
 }
