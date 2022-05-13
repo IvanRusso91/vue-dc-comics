@@ -9,3 +9,8 @@
   @include center;
   list-style: none;
 }
+
+@mixin menu {
+  display: flex;
+  justify-content: space-between;
+}
