@@ -47,11 +47,11 @@ export default {
 @import '../assets/style/mixin';
 .box-cards{
   background-color:$secondary-color ;
-  height: 200px;
+  height: 160px;
   
   h1{
     color: $primary-color;
-    padding-top: 80px;
+    padding-top: 65px;
   }
   i{
     padding: 0px 15px;
@@ -59,35 +59,40 @@ export default {
 }
 .box-choice{
   background-color: $third-color;
-  height: 200px;
   display: flex;
   align-items: center;
+
   ul{
     @include menu;
     list-style: none;
-    a{
-      @include decor; 
-      color: $primary-color;
-      
-      img{
-        width: 50px;
-      }
-      .image-b,
-      .image-c{
-        width: 65px;
-      }
-      .image-d{
-        width: 40px;
-      }
-      .image-e{
-        margin-top: 15px;
-        width: 65px;
-      }
-      p{
-        float: right;
-        margin-left: 15px;
-        margin-top: 35px; 
-      }
+
+    li{
+      padding: 50px;
+      a{
+        @include decor; 
+        color: $primary-color;
+        font-size: 0.8rem;
+
+        img{
+          width: 45px;
+        }
+        .image-b,
+        .image-c{
+          width: 55px;
+        }
+        .image-d{
+          width: 35px;
+        }
+        .image-e{
+          margin-top: 15px;
+          width: 60px;
+        }
+        p{
+          float: right;
+          margin-left: 15px;
+          margin-top: 25px; 
+        }
+      }  
     }
   }
 }

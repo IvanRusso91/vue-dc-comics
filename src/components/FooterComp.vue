@@ -69,8 +69,21 @@
     </div>
 
     <div class="box-foot">
-      <div class="container">
+      <div class="container box-icons">
 
+        <div class="btn">
+          <a href="">Sign-up Now!</a>
+          </div>
+
+        <div class="icons">
+          <h3>Follow Us</h3>
+          <img src="../assets/img/footer-facebook.png" alt="social">
+          <img src="../assets/img/footer-twitter.png" alt="social">
+          <img src="../assets/img/footer-youtube.png" alt="social">
+          <img src="../assets/img/footer-pinterest.png" alt="social">
+          <img src="../assets/img/footer-periscope.png" alt="social">
+
+        </div>
       </div>
     </div>
    
@@ -96,12 +109,6 @@ export default {
   overflow: hidden;
 }
 
-.box-foot{
-  background-color: $fourth-color;
-  height: 150px;
-  padding-bottom: 20px;
-}
-
 .col-left{
   float: left;
   width: 35%;
@@ -117,6 +124,7 @@ export default {
     h3{
       color: $primary-color;
       margin: 20px 0px;
+      text-transform: uppercase;
     }
     ul{
       list-style: none;
@@ -132,20 +140,53 @@ export default {
         }
       }
     }
-  }
-
-  
+  }  
 }
 
 .col-right{
   width: 55%;
   float: right;
-  margin: auto;
 
   img{
     width: 80%;
     margin-top: -103px;
     margin-left: 100px;
+  }
+}
+
+.box-foot{
+  background-color: $fourth-color;
+
+  .box-icons{
+    @include menu;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    .btn a{
+      color: $primary-color;
+      padding: 10px 15px;
+      border: 2px solid $third-color;
+      text-transform: uppercase;
+      &:hover{
+        color: $third-color;
+      }
+    }
+  }
+
+  .icons{
+    display: flex;
+
+    h3{
+      padding-top: 20px;
+      margin-right: 10px;
+      color: $third-color;
+      text-transform: uppercase;
+    }
+
+    img{
+      margin: 10px;
+    }
   }
 }
 
