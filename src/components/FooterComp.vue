@@ -10,14 +10,21 @@
             <h3>Dc Comics</h3>
             <nav>
               <ul>
-                <li v-for="(comic, index) in comics" :key="`c-${index}`"><a href="">{{comic.name}}</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Comics</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">News</a></li>
               </ul>
             </nav>
 
             <h3>Shop</h3>
             <nav>
               <ul>
-                <li v-for="(object, index) in shop" :key="`d-${index}`"><a href="">{{object.name}}</a></li>
+                <li><a href="#">Shop DC </a></li>
+                <li><a href="#">Shop DC Collectibles</a></li>
               </ul>
             </nav>
           </div>
@@ -26,23 +33,37 @@
             <h3>Dc</h3>
             <nav>
               <ul>
-                <li v-for="(oggetto, index) in dc" :key="`e-${index}`"><a href="">{{oggetto.name}}</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Privacy policy (New)</a></li>
+                <li><a href="#">Ad Choices</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">subscription</a></li>
+                <li><a href="#">Talent Workshops</a></li>
+                <li><a href="#">CPSC Certificates</a></li>
+                <li><a href="#">Ratings</a></li>
+                <li><a href="#">Shop Help</a></li>
+                <li><a href="#">Contact Us</a></li>
               </ul>
             </nav>
           </div>
 
-          <div class="col-secondo">
+          <div class="col-terzo">
             <h3>Site</h3>
             <nav>
               <ul>
-                <li v-for="(site, index) in sites" :key="`e-${index}`"><a href="">{{site.name}}</a></li>
+                <li><a href="#">DC</a></li>
+                <li><a href="#">MAD Magazine</a></li>
+                <li><a href="#">DC Kids</a></li>
+                <li><a href="#">DC Universe</a></li>
+                <li><a href="#">DC Power Visa</a></li>
               </ul>
             </nav>
           </div>
         </div>
 
         <div class="col-right">
-          <img src="" alt="">
+          <img src="../assets/img/dc-logo-bg.png" alt="">
         </div>
       </div>
     </div>
@@ -59,121 +80,7 @@
 <script>
 export default {
   name:'FooterComp',
-  data(){
-    return{
-      comics:[
-        {
-          href:'#',
-          name: 'Characters',
-        },
-        {
-          href:'#',
-          name: 'Comics',
-        },
-        {
-          href:'#',
-          name: 'Movies',
-        },
-        {
-          href:'#',
-          name: 'TV',
-        },
-        {
-          href:'#',
-          name: 'Games',
-        },
-        {
-          href:'#',
-          name: 'Videos',
-        },
-        {
-          href:'#',
-          name: 'New',
-        },
-      ],
-
-      shop:[
-        {
-          href: '#',
-          name: 'shop Dc',
-        },
-        {
-          href: '#',
-          name: 'shop Dc Collectible',
-        },
-      ],
-
-      dc:[
-        {
-          href:'#',
-          name: 'Terms of Use',
-        },
-        {
-          href:'#',
-          name: 'Privacy policy (New)',
-        },
-        {
-          href:'#',
-          name: 'Ad Choices',
-        },
-        {
-          href:'#',
-          name: 'Advertising',
-        },
-        {
-          href:'#',
-          name: 'Jobs',
-        },
-        {
-          href:'#',
-          name: 'Subscriptions',
-        },
-        {
-          href:'#',
-          name: 'Talent Workshops',
-        },
-        {
-          href:'#',
-          name: 'CPSC Certificates',
-        },
-        {
-          href:'#',
-          name: 'Ratings',
-        },
-        {
-          href:'#',
-          name: 'Shop Help',
-        },
-        {
-          href:'#',
-          name: 'Contact Us',
-        },
-      ],
-
-      sites:[
-        {
-          href: '#',
-          name: 'DC',
-        },
-        {
-          href: '#',
-          name: 'MAD Magazine',
-        },
-        {
-          href: '#',
-          name: 'DC Kids',
-        },
-        {
-          href: '#',
-          name: 'DC Universe',
-        },
-        {
-          href: '#',
-          name: 'DC Power visa',
-        },
-      ],
-    }
-  }
+ 
 }
 </script>
 
@@ -185,6 +92,8 @@ export default {
 .box-sfondo { 
   background-image: url(../assets/img/footer-bg.jpg);
   background-size: cover;
+  height: 400px;
+  overflow: hidden;
 }
 
 .box-foot{
@@ -193,34 +102,50 @@ export default {
   padding-bottom: 20px;
 }
 
-h3{
-  color: $primary-color;
-  padding: 10px 0px;
-}
-
 .col-left{
-  display: flex;
-  width: calc(40% / 3);
-  padding: 40px 0px;
+  float: left;
+  width: 35%;
+  padding: 20px 0px;
 
   .col-primo,
-  .col-secondo{
-    display: flex;
-    flex-direction: column;
-    margin-right: 80px;
-    
+  .col-secondo,
+  .col-terzo{
+    float: left;
+    width: 33%;
+    padding: 10px;
+
+    h3{
+      color: $primary-color;
+      margin: 20px 0px;
+    }
     ul{
       list-style: none;
 
       li{
-        padding: 3px;
-      }
-      a{
-        color:$fifth-color; 
-        text-decoration: none; 
-        font-size: 0.8rem;
+        a{
+          color:$fifth-color;
+          @include decor;
+          font-size: 0.7rem;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       }
     }
+  }
+
+  
+}
+
+.col-right{
+  width: 55%;
+  float: right;
+  margin: auto;
+
+  img{
+    width: 80%;
+    margin-top: -103px;
+    margin-left: 100px;
   }
 }
 
