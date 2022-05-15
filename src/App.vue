@@ -6,6 +6,7 @@
     <MainComp />
     
     <FooterComp />
+
   </div>
 </template>
 
