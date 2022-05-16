@@ -1,9 +1,20 @@
 <template>
   <main>
+    <div class="jumbo">
+     <div class="container title"><h2>Current Series</h2></div>
+    </div>
+
     <div class="box-cards">
+      <div class="container box-c"> 
+        <CardComp
+          v-for="(link,index) in linksImg" 
+          :key="`link-${index}`"
+          :link="link"
+        />
+      </div>
       
-      <div class="container ">
-        <h1><i class="fa-solid fa-arrow-right"> </i>Content goes here<i class="fa-solid fa-arrow-left"></i></h1>
+      <div class="btn-box">
+        <a class="btn" href="#">Load More</a>
       </div>
       
     </div>
@@ -37,26 +48,77 @@
 </template>
 
 <script>
+
+import CardComp from '../components/CardComp'
+import linksImg from '../assets/data/linksImg'
+
 export default {
   name: 'MainComp',
+  components :{
+    CardComp
+  },
+    data(){
+      return{
+        linksImg,
+      }
+    },
+  mounted(){
+    console.log(this.linksImg);
+  }
 }
 </script>
 
 <style  lang="scss" scoped>
+
 @import '../assets/style/vars';
 @import '../assets/style/mixin';
-.box-cards{
-  background-color:$secondary-color ;
-  height: 160px;
-  
-  h1{
-    color: $primary-color;
-    padding-top: 65px;
-  }
-  i{
-    padding: 0px 15px;
+
+ 
+.jumbo{
+  background-image: url(../assets/img/jumbotron.jpg);
+  background-size: cover;
+  height: 400px;
+
+  .title{
+    text-align: left;
+    padding-top: 378px;
+    text-transform: uppercase;
+
+    h2{
+      position: relative;
+      @include btn; 
+      width: 250px;
+    }
   }
 }
+.box-cards{
+  background-color:rgb(28, 28, 28);
+  padding: 50px 0px;
+  
+  .box-c{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .btn-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px ;
+
+    .btn{
+      color: $primary-color;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      display: flex;
+      background-color: $third-color;
+      padding: 10px 25px;
+      color: $primary-color;  
+    }
+  } 
+}
+
+
 .box-choice{
   background-color: $third-color;
   display: flex;

@@ -101,7 +101,7 @@ export default {
       margin-right: 10px;
 
       ul{
-        @include menu;
+        @include lista;
         list-style: none;
         padding-top: 35px;
 

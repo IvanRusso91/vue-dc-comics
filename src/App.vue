@@ -4,7 +4,7 @@
     <HeaderComp />
 
     <MainComp />
-    
+
     <FooterComp />
 
   </div>
@@ -12,7 +12,7 @@
 
 <script>
 
-import HeaderComp from "./components/HeaderComp";
+import HeaderComp from './components/HeaderComp';
 import MainComp from './components/MainComp';
 import FooterComp from './components/FooterComp';
  
@@ -23,7 +23,7 @@ export default {
     MainComp,
     FooterComp,
    
-  }
+  },
 }
 </script>
 
