@@ -28,8 +28,8 @@ export default {
 
 
 .card{
-  width: calc(100% / 6 - 10px);
-  margin: 5px;
+  width: 205px;
+  margin: 14px;
   margin-bottom: 10px;
 
 
