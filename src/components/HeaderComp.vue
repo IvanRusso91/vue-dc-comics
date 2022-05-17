@@ -106,7 +106,7 @@ export default {
         padding-top: 35px;
 
         li{
-          margin-right: 10px;
+          margin-right: 18px;
 
         }
 
